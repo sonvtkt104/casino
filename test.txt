@@ -1,0 +1,36 @@
+At : 1
+2 : 2
+........
+J: 11
+Q: 12
+K: 13
+
+
+===============  
+chất cơ: 4
+chất rô: 3
+chất tép: 2
+chất bích: 1  
+
+===============
+
+[
+    {
+        card: 1,
+        character: 4  -> 'chất cơ',
+        image: ""
+    }
+]
+
+
+=============== 
+
+type: [
+    'single',   //đánh lẻ
+    'double',   //đánh đôi
+    'triple',   //đánh tam
+    'quartet',  //đánh tứ
+    'chain',    //đánh bộ, chuỗi
+    'doubleChain', //đánh dây thông
+]
+

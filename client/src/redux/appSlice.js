@@ -3,11 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 export const appSlice = createSlice({
     name: 'app',
     initialState: {
-        title: 'tho'
+        name: 'Xuan Son ' + parseInt(Math.random() * 10000),
+        image: '/images/cards.png'
     },
     reducers: {
         update: (state, action) => {
-            state.title = action.payload.title
+            state.name = action.payload.name
         }
     }
 })

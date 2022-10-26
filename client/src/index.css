@@ -11,3 +11,165 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+  --main-color: #001812;
+  --txt-color-hover: #518372;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  color: var(--main-color);
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Quicksand", sans-serif;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+a:hover{
+  color: var(--txt-color-hover);
+}
+.flex{
+  display: flex;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+/*=======================
+Room
+========================*/
+.room {
+  width:100vw;
+  height:100vh;
+  padding-top: 20vh;
+  background-color: gray;
+}
+.room-table {
+  width: 40vw;
+  height: 60vh;
+  margin: auto;
+  position: relative;
+}
+.room-table-left,
+.room-table-right {
+  width:60vh;
+  height: 60vh;
+  border-radius: 50%;
+  border: 2px solid yellow;
+  position: absolute;
+  top: 0;
+  right: -30vh;
+  z-index: 0;
+  background-color: red;
+}
+.room-table-left {
+  left: -30vh;
+}
+.room-table-center {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+}
+
+.room-main {
+  position: absolute;
+  bottom: -30px;
+  left: 45%;
+  width: 100px;
+  height: 100px;
+}
+.room-main-card {
+  position: absolute;
+}
+.room-main-card:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+}
+.room-main-card.active {
+  transform: translateY(-20px);
+}
+.room-user-top {
+  position: absolute;
+  top: -40px;
+  left: 45%;
+}
+.room-user-bottom {
+  position: absolute;
+  left: 45%;
+  bottom: -40px;
+}
+.room-user-left,
+.room-user-right {
+  position: absolute;
+  right: -40px;
+  top: 35%;
+}
+.room-user-left {
+  left: -40px;
+}
+.room-start-game {
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  z-index: 100;
+}
+.room-start-game button {
+  padding:5px 18px;
+  background-color: blue;
+  border: 1px solid gray;
+  color: white;
+  cursor: pointer;
+}
+.room-sort {
+  position: absolute;
+  top: -50px;
+  padding:3px 15px;
+  background-color:yellow;
+}
+.room-cards-current {
+  position: absolute;
+  top: calc(50% - 50px);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.list-room-header button {
+  padding: 5px 20px;
+  background-color: green;
+  margin: 20px 30px;
+  cursor: pointer;
+}
+.room-info {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.room-action {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
